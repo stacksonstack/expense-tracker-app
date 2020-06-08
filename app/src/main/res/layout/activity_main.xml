@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29454D"
+    tools:context=".MainActivity">
+
+
+    <ListView
+        android:id="@+id/expenseList"
+        android:layout_width="180dp"
+        android:layout_height="309dp"
+        android:background="#7FB3AC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="87dp"
+        android:layout_height="40dp"
+        android:background="#19888C"
+        android:fontFamily="@font/basic"
+        android:text="Add Item"
+        android:textColor="#232126"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:background="#7FB3AC"
+        android:checkedButton="@+id/incomeToggle"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incomeList"
+        app:layout_constraintVertical_bias="0.064"><![CDATA[
+
+        />
+
+
+        ]]>
+
+        <RadioButton
+            android:id="@+id/incomeToggle"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:checked="false"
+            android:fontFamily="@font/basic"
+            android:gravity="center"
+            android:onClick="onRadioButtonClicked"
+            android:text="Income"
+            android:textColor="#232126" />
+
+        <RadioButton
+            android:id="@+id/expenseToggle"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:fontFamily="@font/basic"
+            android:gravity="center"
+            android:onClick="onRadioButtonClicked"
+            android:text="Expense"
+            android:textColor="#232126"
+            tools:layout_editor_absoluteX="209dp"
+            tools:layout_editor_absoluteY="424dp" />
+
+        />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="#7FB3AC"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:hint="Add money amount"
+        android:inputType="number"
+        android:textColor="#232126"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/expenseList"
+        app:layout_constraintVertical_bias="0.062" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="#7FB3AC"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:hint="Add description"
+        android:inputType="text"
+        android:textColor="#232126"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/money"
+        app:layout_constraintVertical_bias="0.103" />
+
+    <ListView
+        android:id="@+id/incomeList"
+        android:layout_width="180dp"
+        android:layout_height="309dp"
+        android:background="#7FB3AC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/totalExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:text="Total Expenses: 0$"
+        android:textColor="#7FB3AC"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/totalIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trade_winds"
+        android:text="Total Income: 0$"
+        android:textColor="#7FB3AC"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.729"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <Button
+        android:id="@+id/balanceButton"
+        android:layout_width="87dp"
+        android:layout_height="40dp"
+        android:background="#19888C"
+        android:text="Update"
+        android:textColor="#232126"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentBalance"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <TextView
+        android:id="@+id/currentBalance"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="#7FB3AC"
+        android:fontFamily="@font/trade_winds"
+        android:gravity="center"
+        android:text="Current Balance: "
+        android:textColor="#232126"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desc"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <EditText
+        android:id="@+id/updateBalance"
+        android:layout_width="197dp"
+        android:layout_height="40dp"
+        android:background="#7FB3AC"
+        android:ems="10"
+        android:fontFamily="@font/basic"
+        android:gravity="center"
+        android:hint="Update balance"
+        android:inputType="number"
+        android:textColor="#232126"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentBalance"
+        app:layout_constraintVertical_bias="0.22" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="#19888C"
+        android:onClick="sendToHistory"
+        android:text="History Page"
+        android:textColor="#232126"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balanceButton"
+        app:layout_constraintVertical_bias="0.792" />
+
+    <Button
+        android:id="@+id/aboutButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="#19888C"
+        android:onClick="sendToAbout"
+        android:text="About Page"
+        android:textColor="#232126"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBalance"
+        app:layout_constraintVertical_bias="0.792" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

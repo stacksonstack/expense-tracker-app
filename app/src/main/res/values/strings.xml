@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">expense-tracker</string>
+    <string name="about_our_project">About our project</string>
+    <string name="created_by_anthony_jimenez_stacey_carrillo"><![CDATA[Created By Anthony Jimenez & Stacey Carrillo]]></string>
+    <string name="our_project_is_used_to_manage_both_income_and_expenses_we_have_implemented_andrioid_features_such_as_listview_buttons_radiobuttons_and_radiogroup_we_also_have_multiple_activities_that_we_connected_together_using_intent">Our project is used to manage both income and expenses. We have implemented andrioid features such as ListView, Buttons, RadioButtons, and RadioGroup. We also have multiple activities that we connected together using Intent.</string>
+</resources>
